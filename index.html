@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Multi Task</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <script src="js/app.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    <h1>Multiple Application's</h1>
+    <div id="wrapper">
+         
+         <button id="btn_app1" class="btn btn-primary top_app_btns" onclick="toggle_app1_function()"  >Even and Odd App</button>
+         <button id="btn_app2" class="btn btn-primary top_app_btns" onclick="toggle_app2_function()"  >Marksheet App</button>
+         <button id="btn_app3" class="btn btn-primary top_app_btns" onclick="toggle_app3_function()"  >Calculator App</button>
+            
+            <div id="logindiv">
+                <div class="container">
+                    <div class="loginNote">
+                        <h4>Note it's case sensitive</h4>
+                             <p>UserName:fayaz  || admin</p>
+                             <p>passWord:12345 || admin</p>
+                    </div> <!--close login Note-->
+                        <div id="loginFormdiv">
+                           <form name="loginForm">
+                                <table class="logintbl">
+                                    <tr>
+                                        <td><input type="text" value="User Name" name="inputusr"></td>                   
+                                    </tr>
+
+                                    <tr>
+                                        <td><input type="text" value="Password" name="inputpas"></td>                   
+                                    </tr>
+
+                                    <tr>
+                                        <td><input type="button" value="Login" class="btn btn-primary" onclick="login()"></td>                   
+                                    </tr>
+                                </table>
+                            </form>
+                        </div> <!--div loginForm close-->
+                        
+                       
+                </div> <!--container close-->
+            </div> <!--login div close-->
+
+                 
+
+                        <audio id="myTune"  loop>
+                            <!--<audio  autoplay loop >-->
+                            <!--<source src="tone/Love Me Like You Do.mp3">-->
+                            <!--<source src="http://yung.cloud/uploads/tracks/1781114137_51037040_418048959.mp3" type="audio/mpeg">-->
+                            <!--<source src="https://audio.clyp.it/td5tpir0.mp3?Expires=1490185971&Signature=UzwV4e30FAlcWYeh4a~98yFXdDz7xkP2nYxKQrrw46JW7jQqj8DEjWDaLxrfg3hWf2zWlNNKBvVU5lqVPERK5UiKr7b~lY5gwW8BFrJU4hmUnA-4WaJr8PbSTx42y6tclTQabRnFEUnXRiRawN3AN1O5LUb5SipPdt4kxZS1ak4_&Key-Pair-Id=APKAJ4AMQB3XYIRCZ5PA" type="audio/mpeg">-->
+                            
+                        </audio>
+
+            
+            <div id="div_app1">
+                Application One
+                    <div class="container">
+                          <form name="even_form">  <!--class="even_form"-->
+                              <fieldset>
+                                <legend>Even Or Odd</legend>
+                                    <table>
+                                        <tr>
+                                            <td><input type="text" value="Enter A Number :)" name="input01" size="16"></td>
+                                        </tr>
+                                    </table>
+                                </fieldset> 
+                          </form>
+
+                          <div class="even_odd_btn">
+                              <fieldset>
+                                  <legend>Button's</legend>
+                                     <table>
+                                       <tr>
+                                            <td><input type="button" value="Enter" name="equal" class="btn btn-primary " onclick="doit()">  </td> 
+                                            <td><input type="button" value="Clear" name="equal" class="btn btn-primary " onclick="even_form.input01.value = '' " ></td>                                     
+                                        </tr>  
+                                     </table>
+                                  </fieldset>
+                          </div> <!--even_odd close-->
+                    </div> <!--container close-->
+            </div> <!--app1 close--> 
+             
+             
+             <div id="div_app2">
+                 Application Two
+                    <div class="container">
+                        <form name="grade_form">
+                            <fieldset>
+                                <legend>MarkSheet</legend>
+                                    <table>
+                                        <tr>
+                                            <td><input type="text" value="Enter Your Per% ;)"  name="input01" size="4"></td>
+                                        </tr>
+                                    </table>
+                            </fieldset>  
+                        </form>
+
+                        <div class="grade_btn">
+                              <fieldset>
+                                  <legend>Button's</legend>
+                                     <table>
+                                       <tr>
+                                            <td><input type="button" value="Enter" name="equal" class="btn btn-primary " onclick="markit()" >  </td> 
+                                            <td><input type="button" value="Clear" name="equal" class="btn btn-primary " onclick="grade_form.input01.value = '' " ></td>                                     
+                                        </tr>  
+                                     </table>
+                                  </fieldset>
+                          </div> <!--even_odd close-->
+                    </div> <!--container close-->
+             </div> <!--app1 close--> 
+
+
+             <div id="div_app3">
+                 Application three
+                    <div class="container">
+                        <form name="calc_form">
+                            <fieldset>
+                                <legend>Calculator</legend>
+                                    <table>
+                                        <tr>
+                                            <td><input type="text" value="Enter Ist Value ;)"  name="input01" size="16"></td>
+                                         </tr>
+                                         <tr>
+                                            <td><input type="text" value="Enter 2nd Value ;)"  name="input02" size="16"></td>
+                                         </tr>
+
+                                         <tr>
+                                            <td><input type="text" value="result"  name="input03" size="16"></td>
+                                         </tr>
+
+                                    </table>
+                            </fieldset>  
+                        </form>
+                        
+                        <div class="calc_btn">
+                          <fieldset>
+                                <legend>Button's</legend>  
+                                    <table>
+                                        <tr>
+                                            <td><input type="button" value="+"      class="btn btn-primary" onclick="add()"></td>
+                                            <td><input type="button" value="-"      class="btn btn-primary" onclick="subtract()"></td>
+                                            <td><input type="button" value="X"      class="btn btn-primary" onclick="multiply()"></td>
+                                            <td><input type="button" value="/"      class="btn btn-primary" onclick="divide()"></td>
+                                            <td><input type="button" value="Clear"  class="btn btn-primary" onclick="clearme()"></td>
+                                        </tr>
+                                    </table>
+                             </fieldset>
+                        </div> <!--clac_btn close-->
+
+                    </div> <!--container close-->
+            </div> <!--App3 close-->
+
+           <!-- <iframe id="ifram" width="100%" height="160" src="https://clyp.it/td5tpir0/" frameborder="0"></iframe>-->
+    </div> <!--wrapper close-->
+
+     <button id="btno" onclick="wrapShow()" class="btn  btn-primary ">Show</button>
+     <button id="logout" onclick="logOut()" class="btn  btn-primary ">Logout</button>
+    
+    <!-- <button  onclick="wrapHide()" class="btn  btn-primary ">Hide</button>-->
+
+   <!-- <button type="button" onclick="document.getElementById('wrapper').style.display='block'" 
+    class="btn  btn-primary ">Show</button>
+    
+    <button type="button" onclick="document.getElementById('wrapper').style.display='none'"
+    class="btn  btn-primary ">Hide</button>-->
+    
+    <div id="text"> I want to Show &&nbsp hide this by pressing the button above </div>
+
+</body>
+</html>
+
+
+ 
